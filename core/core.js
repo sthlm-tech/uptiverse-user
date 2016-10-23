@@ -45,7 +45,7 @@ var App = {
       eureka: {
         // eureka server host / port
         host: 'uptiverse-discovery.herokuapp.com',
-        port: 80,
+        port: 39835,
       },
     });
 
