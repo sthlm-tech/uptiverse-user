@@ -47,7 +47,7 @@ var App = {
 		    },
 		  },
 		  eureka: {
-		    serviceUrl: [ 'https://uptiverse-discovery.herokuapp.com:19514/eureka/apps/' ],
+		    serviceUrl: [ 'https://uptiverse-discovery.herokuapp.com/eureka/apps/' ],
 		  },
 		});
 
