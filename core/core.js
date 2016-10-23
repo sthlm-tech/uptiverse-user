@@ -45,8 +45,9 @@ var App = {
       eureka: {
         // eureka server host / port
         host: 'user:incorrect2016@uptiverse-discovery.herokuapp.com',
-        port: 39835,
+				port: 19514,
 				ssl: true,
+				serviceUrl: "/eureka/",
       },
     });
 
