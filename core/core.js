@@ -47,7 +47,7 @@ var App = {
         host: 'user:incorrect2016@uptiverse-discovery.herokuapp.com',
 				port: 19514,
 				ssl: true,
-				serviceUrl: "/eureka/",
+				servicePath: "/eureka/",
       },
     });
 
