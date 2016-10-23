@@ -3,7 +3,7 @@ var bodyParser = require("body-parser");
 var config = require("./../config");
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth20').Strategy;
-var Eureka = require('eureka-js-client').Eureka;
+var Eureka = require('eureka-client').Eureka;
 /*
 passport.use(new GoogleStrategy({
     clientID: "524442664999-jom04q4ea3erjt4fr84m3cf1sbojalhd.apps.googleusercontent.com",
@@ -31,27 +31,27 @@ var App = {
 		});
 
 		App.Eureka = new Eureka({
-      // application instance information
-      instance: {
-        app: 'uptiverse-user',
-        hostName: 'localhost',
-        ipAddr: '127.0.0.1',
-        port: 80,
-        vipAddress: 'jq.test.something.com',
-        dataCenterInfo: {
-          name: 'MyOwn',
-        },
-      },
-      eureka: {
-        // eureka server host / port
-        host: 'user:incorrect2016@uptiverse-discovery.herokuapp.com',
-				port: 19514,
-				ssl: true,
-				servicePath: "/eureka/",
-      },
-    });
+		  instance: {
+		    app: 'uptiverse-user',
+		    hostName: 'localhost',
+		    ipAddr: '127.0.0.1',
+		    statusPageUrl: 'http://localhost:5000',
+		    port: {
+		      '$': 5000,
+		      '@enabled': 'true',
+		    },
+		    vipAddress: 'jq.test.something.com',
+		    dataCenterInfo: {
+		      '@class': 'com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo',
+		      name: 'MyOwn',
+		    },
+		  },
+		  eureka: {
+		    serviceUrl: [ 'https://uptiverse-discovery.herokuapp.com:19514/eureka/apps/' ],
+		  },
+		});
 
-      App.Eureka.start();
+    App.Eureka.start();
 	}
 };
 
