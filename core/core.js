@@ -30,26 +30,7 @@ var App = {
 		    console.log("Listening on port %d", App.Server.address().port);
 		});
 
-		App.Eureka = new Eureka({
-		  instance: {
-		    app: 'uptiverse-user',
-		    hostName: 'localhost',
-		    ipAddr: '127.0.0.1',
-		    statusPageUrl: 'http://localhost:5000',
-		    port: {
-		      '$': 5000,
-		      '@enabled': 'true',
-		    },
-		    vipAddress: 'jq.test.something.com',
-		    dataCenterInfo: {
-		      '@class': 'com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo',
-		      name: 'MyOwn',
-		    },
-		  },
-		  eureka: {
-		    serviceUrl: [ 'https://user:incorrect2016@uptiverse-discovery.herokuapp.com/eureka/apps/' ],
-		  },
-		});
+		App.Eureka = new Eureka(config.eureka);
 
     App.Eureka.start();
 	}
