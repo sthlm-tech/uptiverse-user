@@ -36,7 +36,7 @@ var App = {
         app: 'uptiverse-user',
         hostName: 'localhost',
         ipAddr: '127.0.0.1',
-        port: 8080,
+        port: 80,
         vipAddress: 'jq.test.something.com',
         dataCenterInfo: {
           name: 'MyOwn',
@@ -44,8 +44,8 @@ var App = {
       },
       eureka: {
         // eureka server host / port
-        host: '172.17.25.70',
-        port: 32768,
+        host: 'uptiverse-discovery.herokuapp.com',
+        port: 80,
       },
     });
 
