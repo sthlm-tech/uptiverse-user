@@ -44,8 +44,9 @@ var App = {
       },
       eureka: {
         // eureka server host / port
-        host: 'uptiverse-discovery.herokuapp.com',
+        host: 'user:incorrect2016@uptiverse-discovery.herokuapp.com',
         port: 39835,
+				ssl: true,
       },
     });
 
