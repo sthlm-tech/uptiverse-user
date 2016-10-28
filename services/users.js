@@ -13,22 +13,22 @@ function UserService() {
 	  // we're connected!
 	});
 
-	self.getUserById = function(id){
-		var deferred = when.defer();
-
-		User.findOne({"_id" : id}, function(err,user){
-			deferred.resolve(user);
-		});
-
-		return deferred.promise;
-	};
-
 	self.getusers = function(){
 		var deferred = when.defer();
 
 		User.find(function(err, users) {
 			deferred.resolve(users);
 	  });
+
+		return deferred.promise;
+	};
+
+	self.getUserById = function(id){
+		var deferred = when.defer();
+
+		User.findOne({"_id" : id}, function(err,user){
+			deferred.resolve(user);
+		});
 
 		return deferred.promise;
 	};
