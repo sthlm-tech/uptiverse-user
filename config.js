@@ -22,7 +22,7 @@ module.exports = {
 		  instance: {
 		    app: 'uptiverse-user',
 		    hostName: 'uptiverse-user.herokuapp.com',
-		    statusPageUrl: 'uptiverse-user.herokuapp.com',
+		    statusPageUrl: 'https://uptiverse-user.herokuapp.com',
 		    port: {
 		      '$': 5000,
 		      '@enabled': 'true',
