@@ -4,7 +4,10 @@ var userSchema = mongoose.Schema({
     firstname: String,
     lastname: String,
     pnr: Number,
-    birthday: { type: Date }
+    birthday: { type: Date },
+    googleid: String,
+    picture: String,
+    developmentGoals: String,
 
 });
 

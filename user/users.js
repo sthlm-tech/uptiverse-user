@@ -1,6 +1,6 @@
 var config = require("./../config");
 var mongoose = require('mongoose');
-var User = require("./../models/User");
+var User = require("./User");
 var when = require('when');
 function UserService() {
 	var self = this;
@@ -40,6 +40,9 @@ function UserService() {
 		user.lastname	 = in_user_data.lastname;
 		user.pnr = in_user_data.pnr;
 		user.birthday = in_user_data.birthday;
+		user.googleid = in_user_data.googleid;
+		user.picture = in_user_data.picture;
+		user.developmentGoals = in_user_data.developmentGoals;
 
 		user.save(function(err, createdUser){
 			deferred.resolve(createdUser);
